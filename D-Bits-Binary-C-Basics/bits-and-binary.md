@@ -112,11 +112,12 @@ For example:
     int y = 12;         // 1100 in binary
     assert(x & y == 4); // 0100 (4)
 
-
-NOTE FROM MYSELF: If you try the above code on terminal, get the following message:  warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
-    assert(x & y ==4);
+```diff
+- NOTE FROM MYSELF: If you try the above code on terminal, get the following message:  warning: & has lower precedence than - - ==; == will be evaluated first [-Wparentheses]
+-    assert(x & y ==4);
  
-If you do printf("%d\n", x & y == 4); it'll print 0
+- If you do printf("%d\n", x & y == 4); it'll print 0
+```
 
 
 This provides a handy way of checking the bit value at a given position,
